@@ -5,10 +5,10 @@ to compile:  gcc -o mandsdl mandsdl.c -lSDL
 #include <stdio.h>
 #include <SDL/SDL.h>
 
-#define WIDTH 1024	//N800 screen is 800x480
+#define WIDTH 1024	
 #define HEIGHT 768
 #define DEPTH 8	//8-bit/256 color : using default palette
-#define FILENAME "mand.bmp"	//WTF, SDL only saves Windows BMPs!?
+#define FILENAME "mand.bmp"	
 
 int main(int argc, char **argv) {
 	SDL_Surface *screen;
@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
 		exit(1);
 	}
 	p=(Uint8*)screen->pixels;
-	//surface creation failing on N800 if we start in fullscreen...
+	
 //	SDL_WM_ToggleFullScreen(screen);
 	for(y=0; y<HEIGHT; y++) {
 		for(x=0; x<WIDTH; x++) {
